@@ -11,15 +11,16 @@ Each company was verified using the internal monitoring tool to ensure it was NO
 
 ### 1. Rivian  
 - **ATS Type:** Workday  
-- **Career URL:** rivian.wd5.myworkdayjobs.com  
+- **Career URL:** https://rivian.wd5.myworkdayjobs.com  
 
 ### 2. Grow Therapy  
 - **ATS Type:** Greenhouse  
-- **Career URL:** boards.greenhouse.io/growtherapy  
+- **Career URL:** https://boards.greenhouse.io/growtherapy  
 
 ### 3. Shield AI  
 - **ATS Type:** Lever  
-- **Career URL:** jobs.lever.co/shieldai  
+- **Career URL:** https://jobs.lever.co/shieldai  
+
 
 These companies span three different ATS systems, ensuring variety and correctness.
 
