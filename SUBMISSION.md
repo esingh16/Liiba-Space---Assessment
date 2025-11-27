@@ -200,6 +200,62 @@ A lightweight crawler could map most ATS tenants continuously.
 - Search engine indexing differs by region  
 
 ---
+# Part 2 — ATS Form Correction
 
+For this part of the assessment, I manually reviewed two job application forms from the provided CSV and corrected the `standard_form` JSON for each record.  
+The first record (“launch2”) was already correct, so I used it as a reference to match formatting, structure, and conventions.
+
+---
+
+## Job URLs Verified
+I opened and reviewed the following job application form URLs:
+
+1. https://job-boards.greenhouse.io/hibu/jobs/4615738007  
+2. https://job-boards.greenhouse.io/mediabrands/jobs/52082030007  
+
+For each of these pages, I compared the live HTML form fields with the `raw_form` and the auto-generated `standard_form` from the CSV. I then corrected all fields to accurately represent the job application structure.
+
+---
+
+## What I Corrected
+For each form, I:
+
+- Matched **every field** in the live ATS form with the `standard_form` JSON
+- Fixed incorrect `input_kind` values (e.g., text → select, radio → text)
+- Added missing dropdown **options** exactly as they appear on the page
+- Corrected which fields were **required** vs. optional
+- Cleaned and standardized **labels**, removing noise or extra text
+- Removed fields that do not exist on the actual job page
+- Ensured consistency with the format used in the correct “launch2” sample
+
+All updates were based solely on the live job pages and the provided CSV.
+
+---
+
+## Common Error Patterns Noticed
+These were the most frequent issues in the AI-generated forms:
+
+- Dropdown fields incorrectly tagged as `"input_kind": "text"`
+- Missing `"options"` in select or multiselect inputs
+- Required fields marked optional or missing required flag
+- Duplicate or irrelevant fields not present in the real ATS form
+- Workday/Greenhouse IDs not matching actual DOM structure
+- Inconsistent naming for repeated fields (e.g., “Location”, “City”, “Location Preference”)
+- Extra fields created by the extractor that were not on the page
+
+---
+
+## Final Output
+The corrected JSON for both rows has been placed into the updated CSV file:
+
+**corrected_forms.csv**
+
+This file includes:
+- The original `job_url`
+- The corrected `standard_form` JSON with accurate field types, options, and requirements
+
+Both forms now follow a consistent schema and correctly represent the structure of the real ATS application pages.
+
+---
 
 
